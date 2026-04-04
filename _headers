@@ -2,9 +2,9 @@
   Subscription-Userinfo: name=LegacyVPN [PC]; upload=0; download=0; total=109951162777600
   profile-title: LegacyVPN [PC]
   x-profile-title: LegacyVPN [PC]
-  profile-update-interval: 6
+  profile-update-interval: 2
 /mobile
   Subscription-Userinfo: name=LegacyVPN [Mobile]; upload=0; download=0; total=109951162777600
   profile-title: LegacyVPN [Mobile]
   x-profile-title: LegacyVPN [Mobile]
-  profile-update-interval: 6
+  profile-update-interval: 2
