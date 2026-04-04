@@ -1,35 +1,27 @@
 /pc
-  profile-title: base64:8J+agCBMZWdhY3lWUE4gW1BDXQ==
+  profile-title: base64:🛡️ LegacyVPN [PC] | Пингуй: есть МС - ок, нет - сервер спит, не мешай
   subscription-userinfo: upload=0; download=0; total=109951162777600; expire=1914278400
   profile-update-interval: 6
   support-url: https://t.me/your_telegram_username
-  profile-web-page-url: https://legacyvpn.ru/info
-  x-description: base64:0J3QsNC20LjQvNCw0Lkg0L3QsCDQuNC30LzQtdGA0LXQvdC40LUg0YHQutC90YDQvtGB0YLQuCwg0L/QvtC00LrQu9GO0YfQsNC50YHRjyDQs9C00LUg0LXRgdGC0Ywg0L/QuNC90LMg0LIg0JzQoSwg0LAg0LXRgdC70Lgg0L3QtdGCLCDQt9C90LDRh9C00YIsINGH0YLQviDRgdC10YDQstC10YAg0YHQv9C40YIu
   content-disposition: attachment; filename="LegacyVPN_PC"
 
 /pc_configs.txt
-  profile-title: base64:8J+agCBMZWdhY3lWUE4gW1BDXQ==
+  profile-title: base64:🛡️ LegacyVPN [PC] | Пингуй: есть МС - ок, нет - спит
   subscription-userinfo: upload=0; download=0; total=109951162777600; expire=1914278400
   profile-update-interval: 6
   support-url: https://t.me/your_telegram_username
-  profile-web-page-url: https://legacyvpn.ru/info
-  x-description: base64:0J3QsNC20LjQvNCw0Lkg0L3QsCDQuNC30LzQtdGA0LXQvdC40LUg0YHQutC90YDQvtGB0YLQuCwg0L/QvtC00LrQu9GO0YfQsNC50YHRjyDQs9C00LUg0LXRgdGC0Ywg0L/QuNC90LMg0LIg0JzQoSwg0LAg0LXRgdC70Lgg0L3QtdGCLCDQt9C90LDRh9C00YIsINGH0YLQviDRgdC10YDQstC10YAg0YHQv9C40YIu
   content-disposition: attachment; filename="LegacyVPN_PC"
 
 /mobile
-  profile-title: base64:8J+agCBMZWdhY3lWUE4gW01vYmlsZV0=
+  profile-title: base64:🛡️ LegacyVPN [Mobile] | Пингуй: есть МС - ок, нет - спит
   subscription-userinfo: upload=0; download=0; total=109951162777600; expire=1914278400
   profile-update-interval: 6
   support-url: https://t.me/your_telegram_username
-  profile-web-page-url: https://legacyvpn.ru/info
-  x-description: base64:0J3QsNC20LjQvNCw0Lkg0L3QsCDQuNC30LzQtdGA0LXQvdC40LUg0YHQutC90YDQvtGB0YLQuCwg0L/QvtC00LrQu9GO0YfQsNC50YHRjyDQs9C00LUg0LXRgdGC0Ywg0L/QuNC90LMg0LIg0JzQoSwg0LAg0LXRgdC70Lgg0L3QtdGCLCDQt9C90LDRh9C00YIsINGH0YLQviDRgdC10YDQstC10YAg0YHQv9C40YIu
   content-disposition: attachment; filename="LegacyVPN_Mobile"
 
 /mobile_configs.txt
-  profile-title: base64:8J+agCBMZWdhY3lWUE4gW01vYmlsZV0=
+  profile-title: base64:🛡️ LegacyVPN [Mobile] | Пингуй: есть МС - ок, нет - спит
   subscription-userinfo: upload=0; download=0; total=109951162777600; expire=1914278400
   profile-update-interval: 6
   support-url: https://t.me/your_telegram_username
-  profile-web-page-url: https://legacyvpn.ru/info
-  x-description: base64:0J3QsNC20LjQvNCw0Lkg0L3QsCDQuNC30LzQtdGA0LXQvdC40LUg0YHQutC90YDQvtGB0YLQuCwg0L/QvtC00LrQu9GO0YfQsNC50YHRjyDQs9C00LUg0LXRgdGC0Ywg0L/QuNC90LMg0LIg0JzQoSwg0LAg0LXRgdC70Lgg0L3QtdGCLCDQt9C90LDRh9C00YIsINGH0YLQviDRgdC10YDQstC10YAg0YHQv9C40YIu
   content-disposition: attachment; filename="LegacyVPN_Mobile"
