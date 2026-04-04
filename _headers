@@ -4,6 +4,7 @@
   profile-update-interval: 6
   support-url: https://t.me/your_telegram_username
   content-disposition: attachment; filename="LegacyVPN_PC"
+  x-description: base64:0J3QsNC20LjQvNCw0Lkg0L3QsCDQuNC30LzQtdGA0LXQvdC40LUg0YHQutC90YDQvtGB0YLQuCwg0L/QvtC00LrQu9GO0YfQsNC50YHRjyDQs9C00LUg0LXRgdGC0Ywg0L/QuNC90LMg0LIg0JzQoSwg0LAg0LXRgdC70Lgg0L3QtdGCLCDQt9C90LDRh9C00YIsINGH0YLQviDRgdC10YDQstC10YAg0YHQv9C40YIu
 
 /pc_configs.txt
   profile-title: base64:8J+agCBMZWdhY3lWUE4gW1BDXQ==
@@ -11,6 +12,7 @@
   profile-update-interval: 6
   support-url: https://t.me/your_telegram_username
   content-disposition: attachment; filename="LegacyVPN_PC"
+  x-description: base64:0J3QsNC20LjQvNCw0Lkg0L3QsCDQuNC30LzQtdGA0LXQvdC40LUg0YHQutC90YDQvtGB0YLQuCwg0L/QvtC00LrQu9GO0YfQsNC50YHRjyDQs9C00LUg0LXRgdGC0Ywg0L/QuNC90LMg0LIg0JzQoSwg0LAg0LXRgdC70Lgg0L3QtdGCLCDQt9C90LDRh9C00YIsINGH0YLQviDRgdC10YDQstC10YAg0YHQv9C40YIu
 
 /mobile
   profile-title: base64:8J+agCBMZWdhY3lWUE4gW01vYmlsZV0=
@@ -18,6 +20,7 @@
   profile-update-interval: 6
   support-url: https://t.me/your_telegram_username
   content-disposition: attachment; filename="LegacyVPN_Mobile"
+  x-description: base64:0J3QsNC20LjQvNCw0Lkg0L3QsCDQuNC30LzQtdGA0LXQvdC40LUg0YHQutC90YDQvtGB0YLQuCwg0L/QvtC00LrQu9GO0YfQsNC50YHRjyDQs9C00LUg0LXRgdGC0Ywg0L/QuNC90LMg0LIg0JzQoSwg0LAg0LXRgdC70Lgg0L3QtdGCLCDQt9C90LDRh9C00YIsINGH0YLQviDRgdC10YDQstC10YAg0YHQv9C40YIu
 
 /mobile_configs.txt
   profile-title: base64:8J+agCBMZWdhY3lWUE4gW01vYmlsZV0=
@@ -25,3 +28,4 @@
   profile-update-interval: 6
   support-url: https://t.me/your_telegram_username
   content-disposition: attachment; filename="LegacyVPN_Mobile"
+  x-description: base64:0J3QsNC20LjQvNCw0Lkg0L3QsCDQuNC30LzQtdGA0LXQvdC40LUg0YHQutC90YDQvtGB0YLQuCwg0L/QvtC00LrQu9GO0YfQsNC50YHRjyDQs9C00LUg0LXRgdGC0Ywg0L/QuNC90LMg0LIg0JzQoSwg0LAg0LXRgdC70Lgg0L3QtdGCLCDQt9C90LDRh9C00YIsINGH0YLQviDRgdC10YDQstC10YAg0YHQv9C40YIu
