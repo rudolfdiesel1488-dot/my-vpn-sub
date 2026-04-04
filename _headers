@@ -1,10 +1,27 @@
 /pc
-  Subscription-Userinfo: name=LegacyVPN [PC]; upload=0; download=0; total=109951162777600
-  profile-title: LegacyVPN [PC]
-  x-profile-title: LegacyVPN [PC]
-  profile-update-interval: 2
+  profile-title: base64:8J+agCBMZWdhY3lWUE4gW1BDXQ==
+  subscription-userinfo: upload=0; download=0; total=109951162777600; expire=1914278400
+  profile-update-interval: 6
+  support-url: https://t.me/your_telegram_username
+  content-disposition: attachment; filename="LegacyVPN_PC"
+
+/pc_configs.txt
+  profile-title: base64:8J+agCBMZWdhY3lWUE4gW1BDXQ==
+  subscription-userinfo: upload=0; download=0; total=109951162777600; expire=1914278400
+  profile-update-interval: 6
+  support-url: https://t.me/your_telegram_username
+  content-disposition: attachment; filename="LegacyVPN_PC"
+
 /mobile
-  Subscription-Userinfo: name=LegacyVPN [Mobile]; upload=0; download=0; total=109951162777600
-  profile-title: LegacyVPN [Mobile]
-  x-profile-title: LegacyVPN [Mobile]
-  profile-update-interval: 2
+  profile-title: base64:8J+agCBMZWdhY3lWUE4gW01vYmlsZV0=
+  subscription-userinfo: upload=0; download=0; total=109951162777600; expire=1914278400
+  profile-update-interval: 6
+  support-url: https://t.me/your_telegram_username
+  content-disposition: attachment; filename="LegacyVPN_Mobile"
+
+/mobile_configs.txt
+  profile-title: base64:8J+agCBMZWdhY3lWUE4gW01vYmlsZV0=
+  subscription-userinfo: upload=0; download=0; total=109951162777600; expire=1914278400
+  profile-update-interval: 6
+  support-url: https://t.me/your_telegram_username
+  content-disposition: attachment; filename="LegacyVPN_Mobile"
