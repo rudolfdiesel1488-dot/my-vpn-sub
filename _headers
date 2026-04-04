@@ -1,6 +1,6 @@
-/pc_configs.txt
+/pc
   Subscription-Userinfo: name=LegacyVPN [PC]; total=21474836480; expire=1914278400
-/mobile_configs.txt
+/mobile
   Subscription-Userinfo: name=LegacyVPN [Mobile]; total=21474836480
-/whitelist_configs.txt
+/white
   Subscription-Userinfo: name=LegacyVPN [WhiteList]
