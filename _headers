@@ -1,27 +1,27 @@
 /pc
-  profile-title: base64:8J+boe+4j0xlZ2FjeVZQTiBbUENdINCY0LfQvNC10YDRj9C5INGB0LrQvtGA0L7RgdGC0YwuINCV0YHRgtGMINC/0LjQvdCzIC0g0L/QvtC00LrQu9GO0YfQsNC50YHRjy4gTi9BIC0g0L3QtSDRgtGA0L7Qs9Cw0Lku
+  profile-title: base64:8J+ShieldCBMZWdhY3lWUE4gW1BDXQ==
   subscription-userinfo: upload=0; download=0; total=109951162777600; expire=1914278400
-  profile-update-interval: 2
+  x-description: base64:0JjQt9C80LXRY9C5INGB0LrQvtGA0L7RgdGC0YwuINCV0YHQu9C8INC10YHRgtGMINCyINCc0KEgLSDQstGL0LHQuNGA0LDQuCDQtdCz0L4sINC10YHQu9C8INC90LXRgiAtINGB0L1RgNCy0LXRgCDRgdC/0LjRgiwg0L3QtSDQvNC10YjQsNC5Lg==
+  profile-update-interval: 6
   support-url: https://t.me/your_telegram_username
-  content-disposition: attachment; filename="LegacyVPN_PC"
 
 /pc_configs.txt
-  profile-title: base64:8J+boe+4j0xlZ2FjeVZQTiBbUENdINCY0LfQvNC10YDRj9C5INGB0LrQvtGA0L7RgdGC0YwuINCV0YHRgtGMINC/0LjQvdCzIC0g0L/QvtC00LrQu9GO0YfQsNC50YHRjy4gTi9BIC0g0L3QtSDRgtGA0L7Qs9Cw0Lku
+  profile-title: base64:8J+ShieldCBMZWdhY3lWUE4gW1BDXQ==
   subscription-userinfo: upload=0; download=0; total=109951162777600; expire=1914278400
-  profile-update-interval: 2
+  x-description: base64:0JjQt9C80LXRY9C5INGB0LrQvtGA0L7RgdGC0YwuINCV0YHQu9C8INC10YHRgtGMINCyINCc0KEgLSDQstGL0LHQuNGA0LDQuCDQtdCz0L4sINC10YHQu9C8INC90LXRgiAtINGB0L1RgNCy0LXRgCDRgdC/0LjRgiwg0L3QtSDQvNC10YjQsNC5Lg==
+  profile-update-interval: 6
   support-url: https://t.me/your_telegram_username
-  content-disposition: attachment; filename="LegacyVPN_PC"
 
 /mobile
-  profile-title: base64:8J+boe+4j0xlZ2FjeVZQTiBbUENdINCY0LfQvNC10YDRj9C5INGB0LrQvtGA0L7RgdGC0YwuINCV0YHRgtGMINC/0LjQvdCzIC0g0L/QvtC00LrQu9GO0YfQsNC50YHRjy4gTi9BIC0g0L3QtSDRgtGA0L7Qs9Cw0Lku
+  profile-title: base64:8J+ShieldCBMZWdhY3lWUE4gW01vYmlsZV0=
   subscription-userinfo: upload=0; download=0; total=109951162777600; expire=1914278400
-  profile-update-interval: 2
+  x-description: base64:0JjQt9C80LXRY9C5INGB0LrQvtGA0L7RgdGC0YwuINCV0YHQu9C8INC10YHRgtGMINCyINCc0KEgLSDQstGL0LHQuNGA0LDQuCDQtdCz0L4sINC10YHQu9C8INC90LXRgiAtINGB0L1RgNCy0LXRgCDRgdC/0LjRgiwg0L3QtSDQvNC10YjQsNC5Lg==
+  profile-update-interval: 6
   support-url: https://t.me/your_telegram_username
-  content-disposition: attachment; filename="LegacyVPN_Mobile"
 
 /mobile_configs.txt
-  profile-title: base64:8J+boe+4j0xlZ2FjeVZQTiBbUENdINCY0LfQvNC10YDRj9C5INGB0LrQvtGA0L7RgdGC0YwuINCV0YHRgtGMINC/0LjQvdCzIC0g0L/QvtC00LrQu9GO0YfQsNC50YHRjy4gTi9BIC0g0L3QtSDRgtGA0L7Qs9Cw0Lku
+  profile-title: base64:8J+ShieldCBMZWdhY3lWUE4gW01vYmlsZV0=
   subscription-userinfo: upload=0; download=0; total=109951162777600; expire=1914278400
-  profile-update-interval: 2
+  x-description: base64:0JjQt9C80LXRY9C5INGB0LrQvtGA0L7RgdGC0YwuINCV0YHQu9C8INC10YHRgtGMINCyINCc0KEgLSDQstGL0LHQuNGA0LDQuCDQtdCz0L4sINC10YHQu9C8INC90LXRgiAtINGB0L1RgNCy0LXRgCDRgdC/0LjRgiwg0L3QtSDQvNC10YjQsNC5Lg==
+  profile-update-interval: 6
   support-url: https://t.me/your_telegram_username
-  content-disposition: attachment; filename="LegacyVPN_Mobile"
