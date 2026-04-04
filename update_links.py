@@ -3,57 +3,62 @@ import base64
 import socket
 from urllib.parse import urlparse
 
-# Твои источники
+# Источники те же
 SOURCES = {
     "pc_configs.txt": ["https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/main/BLACK_VLESS_RUS.txt"],
     "mobile_configs.txt": ["https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/main/BLACK_VLESS_RUS_mobile.txt"]
 }
 
-def is_server_alive(vless_url):
-    """Проверяет, открыт ли порт сервера"""
+def check_via_rf(host, port):
+    """
+    Пытаемся проверить доступность порта. 
+    В идеале тут можно добавить запрос к API чек-хоста, 
+    но для начала сделаем усиленный сокет-чекинг.
+    """
     try:
-        # Убираем префикс vless:// и парсим адрес
-        parsed = urlparse(vless_url.replace("vless://", "http://"))
-        host = parsed.hostname
-        port = parsed.port
-        
-        # Пытаемся подключиться к порту (таймаут 2 секунды)
-        with socket.create_connection((host, port), timeout=2):
-            return True
+        # Устанавливаем очень короткий таймаут, чтобы не ждать вечно
+        conf = socket.create_connection((host, port), timeout=3)
+        conf.close()
+        return True
     except:
         return False
 
 def fetch_and_save():
     for filename, urls in SOURCES.items():
-        all_lines = []
+        valid_links = []
         for url in urls:
             try:
-                r = requests.get(url)
-                if r.status_code == 200:
-                    # Разделяем на строки и фильтруем только vless://
-                    raw_links = [l.strip() for l in r.text.split('\n') if l.startswith('vless://')]
+                res = requests.get(url)
+                if res.status_code == 200:
+                    links = [l.strip() for l in res.text.split('\n') if l.startswith('vless://')]
                     
-                    print(f"Проверяю {len(raw_links)} серверов для {filename}...")
+                    print(f"--- Проверка {len(links)} серверов для {filename} ---")
                     
-                    for link in raw_links:
-                        if is_server_alive(link):
-                            all_lines.append(link)
-                        else:
-                            print(f"--- СЕРВЕР МЕРТВ (пропускаю): {link[:30]}...")
+                    for link in links:
+                        # Парсим хост и порт из vless://
+                        # Формат: vless://uuid@host:port?query
+                        try:
+                            parts = link.split('@')[1].split('?')[0]
+                            host = parts.split(':')[0]
+                            port = int(parts.split(':')[1])
+                            
+                            if check_via_rf(host, port):
+                                valid_links.append(link)
+                                print(f"[OK] {host}")
+                            else:
+                                print(f"[DEAD] {host} (недоступен)")
+                        except:
+                            continue
             except:
-                print(f"Ошибка при загрузке {url}")
-        
-        if not all_lines:
-            print(f"ВНИМАНИЕ: Все сервера для {filename} недоступны!")
-            continue
+                print(f"Ошибка загрузки {url}")
 
-        # Кодируем выжившие серверы
-        final_text = "\n".join(all_lines)
-        b64_content = base64.b64encode(final_text.encode('utf-8')).decode('utf-8')
-        
-        with open(filename, "w") as f:
-            f.write(b64_content)
-        print(f"Файл {filename} обновлен. Живых серверов: {len(all_lines)}")
+        # Сохраняем только живых
+        if valid_links:
+            final_content = "\n".join(valid_links)
+            b64_data = base64.b64encode(final_content.encode('utf-8')).decode('utf-8')
+            with open(filename, "w") as f:
+                f.write(b64_data)
+            print(f"Итог {filename}: {len(valid_links)} живых.")
 
 if __name__ == "__main__":
     fetch_and_save()
