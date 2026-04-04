@@ -2,7 +2,7 @@ name: Update VPN Subscriptions
 
 on:
   schedule:
-    - cron: '*/15 * * * *' # Запуск каждые 15 минут
+    - cron: '*/30 * * * *' # Запуск каждые 15 минут
   workflow_dispatch: # Кнопка для ручного запуска
 
 jobs:
