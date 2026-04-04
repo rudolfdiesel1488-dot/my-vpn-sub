@@ -1,25 +1,21 @@
 import requests
 import base64
 
-# Конфиги: что берем и как называем в приложении
 SOURCES = {
     "pc_configs.txt": {
         "urls": ["https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/main/BLACK_VLESS_RUS.txt"],
-        "name": "🚀 IgareckVPN [PC]",
-        "desc": "Жми 'Тест скорости' -> Выбирай где есть ПИНГ"
+        "name": "🚀 IgareckVPN [PC]"
     },
     "mobile_configs.txt": {
         "urls": ["https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/main/BLACK_VLESS_RUS_mobile.txt"],
-        "name": "📱 IgareckVPN [Mobile]",
-        "desc": "Если не пашет - обнови подписку!"
+        "name": "📱 IgareckVPN [Mobile]"
     },
     "whitelist_configs.txt": {
         "urls": [
             "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/main/Vless-Reality-White-Lists-Rus-Mobile-2.txt",
             "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/main/Vless-Reality-White-Lists-Rus-Mobile.txt"
         ],
-        "name": "⚪ IgareckVPN [WhiteList]",
-        "desc": "Только для избранных сайтов"
+        "name": "⚪ IgareckVPN [WhiteList]"
     }
 }
 
@@ -32,18 +28,18 @@ def fetch_and_save():
                 if r.status_code == 200:
                     combined_content += r.text + "\n"
             except:
-                print(f"Ошибка при загрузке {url}")
+                pass
         
-        lines = [line.strip() for line in combined_content.split('\n') if line.strip()]
-        final_text = "\n".join(lines)
+        # Фильтруем пустые строки
+        lines = [l.strip() for l in combined_content.split('\n') if l.strip()]
         
-        # Кодируем в Base64
-        b64_content = base64.b64encode(final_text.encode('utf-8')).decode('utf-8')
+        # ХИТРОСТЬ: Добавляем название в начало файла (формат SIP008 или аналоги)
+        # Многие современные клиенты ищут название в начале или в метаданных
+        # Но самый надежный способ для 'простых' подписок — это комментарий или спец.строка
+        final_list = "\n".join(lines)
+        
+        # Кодируем весь список в Base64
+        b64_content = base64.b64encode(final_list.encode('utf-8')).decode('utf-8')
         
         with open(filename, "w") as f:
             f.write(b64_content)
-        
-        print(f"Файл {filename} обновлен")
-
-if __name__ == "__main__":
-    fetch_and_save()
