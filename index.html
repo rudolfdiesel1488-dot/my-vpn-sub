@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LegacyVPN — Твоя свобода здесь</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #050810; color: white; overflow-x: hidden; }
+        
+        /* Эффект для неоновых карточек */
+        .neon-card {
+            background: #0f172a;
+            border: 1px solid rgba(59, 130, 246, 0.15);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+        .neon-card:hover {
+            transform: scale(1.08) translateY(-5px);
+            border-color: #3b82f6;
+            box-shadow: 0 0 40px rgba(59, 130, 246, 0.5);
+            z-index: 10;
+        }
+
+        /* Кнопки с неоновым свечением */
+        .btn-glow {
+            transition: 0.3s;
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+        }
+        .btn-glow:hover {
+            box-shadow: 0 0 30px rgba(59, 130, 246, 0.7);
+            transform: translateY(-2px);
+        }
+        
+        /* Анимация пульсации для аварийной кнопки */
+        @keyframes pulse-green {
+            0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.6); }
+            70% { box-shadow: 0 0 0 10px rgba(34, 197, 94, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+        }
+        .pulse-green:hover {
+            animation: pulse-green 1.5s infinite;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+
+    <div class="max-w-6xl mx-auto px-6 pt-28 pb-16 text-center">
+        <h1 class="text-6xl md:text-8xl font-extrabold mb-8 italic tracking-tighter leading-none">
+            LegacyVPN <span class="text-blue-500">—</span> твоя свобода здесь.
+        </h1>
+        <p class="text-gray-400 text-2xl max-w-3xl mx-auto mb-20 font-light">
+            Забудь про цензуру и ограничения. Мы создали инструмент, который просто работает. Быстро, анонимно, без компромиссов.
+        </p>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-28">
+            <div class="neon-card p-10 rounded-[32px] text-left">
+                <i class="fas fa-code text-blue-500 text-4xl mb-6"></i>
+                <h3 class="font-bold text-2xl mb-3">Open Source</h3>
+                <p class="text-gray-400 text-base leading-relaxed">Полностью открытый исходный код на GitHub. Проверяй, собирай сам, доверяй.</p>
+            </div>
+            <div class="neon-card p-10 rounded-[32px] text-left">
+                <i class="fas fa-gauge-high text-blue-500 text-4xl mb-6"></i>
+                <h3 class="font-bold text-2xl mb-3">High Speed</h3>
+                <p class="text-gray-400 text-base leading-relaxed">Скорость до 300 Мбит/с. Видео в 4K без задержек и лагов даже в часы пик.</p>
+            </div>
+            <div class="neon-card p-10 rounded-[32px] text-left">
+                <i class="fas fa-globe text-blue-500 text-4xl mb-6"></i>
+                <h3 class="font-bold text-2xl mb-3">Много серверов</h3>
+                <p class="text-gray-400 text-base leading-relaxed">Швеция, Австрия, Нидерланды. Твой трафик растворяется в мировом потоке.</p>
+            </div>
+            <div class="neon-card p-10 rounded-[32px] text-left">
+                <i class="fas fa-browser text-blue-500 text-4xl mb-6"></i>
+                <h3 class="font-bold text-2xl mb-3">Без ботов</h3>
+                <p class="text-gray-400 text-base leading-relaxed">Никаких глючных Telegram-ботов. Всё управление через этот удобный сайт.</p>
+            </div>
+        </div>
+
+        <div class="bg-blue-600/10 border border-blue-500/20 rounded-[48px] p-12 max-w-5xl mx-auto mb-20 shadow-2xl shadow-blue-500/5">
+            <h2 class="text-4xl font-extrabold mb-10 italic tracking-tight">Подключиться в один клик</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <a href="happ://add-subscription?url=https://legacyvpn.ru/pc_configs.txt" class="btn-glow bg-blue-600 p-6 rounded-2xl font-black text-xl flex items-center justify-center gap-3.5 transition-all active:scale-95">
+                    <i class="fas fa-bolt text-yellow-300"></i> В Happ Plus
+                </a>
+
+                <a href="https://legacyvpn.ru/pc_configs.txt" target="_blank" class="btn-glow bg-white/5 p-6 rounded-2xl font-bold text-lg flex items-center justify-center gap-3.5 border border-white/10 hover:bg-white/15 transition-all">
+                    <i class="fas fa-desktop text-blue-400"></i> Конфиг ПК
+                </a>
+
+                <a href="https://legacyvpn.ru/mobile_configs.txt" target="_blank" class="btn-glow bg-white/5 p-6 rounded-2xl font-bold text-lg flex items-center justify-center gap-3.5 border border-white/10 hover:bg-white/15 transition-all">
+                    <i class="fas fa-mobile-alt text-purple-400"></i> Конфиг Mobile
+                </a>
+
+                <a href="happ://add-subscription?url=https://legacyvpn.ru/whitelist_configs.txt" class="btn-glow pulse-green bg-green-600/15 p-6 rounded-2xl font-bold text-lg flex items-center justify-center gap-3.5 border border-green-500/30 hover:bg-green-600/30 transition-all lg:col-span-3">
+                    <i class="fas fa-shield-halved text-green-400"></i> Аварийный режим (Maks)
+                </a>
+            </div>
+            <p class="mt-8 text-gray-500 text-base italic">Если диплинк не сработал, просто скопируйте адрес ссылки (https://legacyvpn.ru/...) и добавьте его в приложении вручную.</p>
+        </div>
+
+        <div class="text-gray-600 text-xl font-light">
+            Возникли вопросы? Связь с разработчиком: <a href="https://t.me/LegacyVPNHelper" target="_blank" class="text-blue-400 hover:text-blue-300 font-medium hover:underline transition">@LegacyVPNHelper</a>
+        </div>
+    </div>
+
+    <footer class="py-12 text-center text-gray-800 text-xs uppercase tracking-widest border-t border-white/5 mt-10">
+        &copy; 2026 LegacyVPN Project • Novokuznetsk • Сделано с любовью к свободе.
+    </footer>
+
+</body>
+</html>
