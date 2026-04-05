@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://legacyvpn.ru/sitemap.xml
