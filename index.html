@@ -29,6 +29,13 @@
             transform: translateY(-2px);
         }
 
+        .copy-btn {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: 0.2s;
+        }
+        .copy-btn:hover { background: rgba(255,255,255,0.15); border-color: white; }
+
         #emergency-info { display: none; }
         #emergency-info.active { display: block; animation: slideDown 0.4s ease-out; }
 
@@ -45,7 +52,7 @@
             LegacyVPN <span class="text-blue-500">—</span> твоя свобода здесь.
         </h1>
         <p class="text-gray-400 text-2xl max-w-3xl mx-auto mb-20 font-light">
-            Забудь про цензуру. Личные серверы, открытый код, максимальная защита.
+            Личный сервер в Стокгольме. VLESS + Reality. Скорость 300 Мбит/с.
         </p>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-28">
@@ -57,71 +64,83 @@
             <div class="neon-card p-10 rounded-[32px] text-left">
                 <i class="fas fa-gauge-high text-blue-500 text-4xl mb-6"></i>
                 <h3 class="font-bold text-2xl mb-3">High Speed</h3>
-                <p class="text-gray-400 text-base">Скорость до 300 Мбит/с. Видео в 4K без лагов.</p>
+                <p class="text-gray-400 text-base">300 Мбит/с. Видео в 4K без лагов и задержек.</p>
             </div>
             <div class="neon-card p-10 rounded-[32px] text-left">
                 <i class="fas fa-globe text-blue-500 text-4xl mb-6"></i>
                 <h3 class="font-bold text-2xl mb-3">Много серверов</h3>
-                <p class="text-gray-400 text-base">Швеция, Австрия, Польша. Прямые каналы.</p>
+                <p class="text-gray-400 text-base">Швеция, Австрия, Польша. Прямые каналы связи.</p>
             </div>
             <div class="neon-card p-10 rounded-[32px] text-left">
                 <i class="fas fa-robot-slash text-blue-500 text-4xl mb-6"></i>
                 <h3 class="font-bold text-2xl mb-3">Без ботов</h3>
-                <p class="text-gray-400 text-base">Никаких глючных ТГ-ботов. Всё на этом сайте.</p>
+                <p class="text-gray-400 text-base">Всё управление через этот сайт. Просто и удобно.</p>
             </div>
         </div>
 
         <div class="bg-blue-600/10 border border-blue-500/20 rounded-[48px] p-12 max-w-5xl mx-auto mb-10 shadow-2xl">
-            <h2 class="text-4xl font-extrabold mb-10 italic">Подключиться в один клик</h2>
+            <h2 class="text-4xl font-extrabold mb-10 italic uppercase">Быстрый запуск в Happ</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 
-                <button onclick="copyLink('https://legacyvpn.ru/pc_configs.txt')" class="btn-glow bg-blue-600 p-6 rounded-2xl font-black text-xl flex items-center justify-center gap-3 active:scale-95 transition">
-                    <i class="fas fa-desktop"></i> На ПК
-                </button>
+                <a href="happ://import/https://legacyvpn.ru/pc_configs.txt" class="btn-glow bg-blue-600 p-6 rounded-2xl font-black text-xl flex items-center justify-center gap-3 active:scale-95 transition">
+                    <i class="fas fa-desktop"></i> В Happ (ПК)
+                </a>
 
-                <button onclick="copyLink('https://legacyvpn.ru/mobile_configs.txt')" class="btn-glow bg-blue-600 p-6 rounded-2xl font-black text-xl flex items-center justify-center gap-3 active:scale-95 transition">
-                    <i class="fas fa-mobile-alt"></i> На Телефон
-                </button>
+                <a href="happ://import/https://legacyvpn.ru/mobile_configs.txt" class="btn-glow bg-blue-600 p-6 rounded-2xl font-black text-xl flex items-center justify-center gap-3 active:scale-95 transition">
+                    <i class="fas fa-mobile-alt"></i> В Happ (Тел)
+                </a>
 
-                <button onclick="copyLink('https://legacyvpn.ru/whitelist_configs.txt')" class="btn-glow bg-green-600 p-6 rounded-2xl font-black text-xl flex items-center justify-center gap-3 active:scale-95 transition">
-                    <i class="fas fa-shield-halved"></i> Белые списки
-                </button>
+                <a href="happ://import/https://legacyvpn.ru/whitelist_configs.txt" class="btn-glow bg-green-600 p-6 rounded-2xl font-black text-xl flex items-center justify-center gap-3 active:scale-95 transition">
+                    <i class="fas fa-shield-halved"></i> В Happ (White)
+                </a>
             </div>
 
-            <button onclick="toggleEmergency()" class="mt-10 text-red-400 font-bold hover:text-red-300 transition flex items-center justify-center gap-2 mx-auto uppercase tracking-widest text-sm">
-                <i class="fas fa-triangle-exclamation"></i> Аварийное добавление (если не работает)
+            <button onclick="toggleEmergency()" class="mt-12 text-red-400 font-bold hover:text-red-300 transition flex items-center justify-center gap-2 mx-auto uppercase tracking-tighter text-sm border-b border-red-500/30 pb-1">
+                <i class="fas fa-triangle-exclamation"></i> Если кнопки выше не сработали (Аварийное добавление)
             </button>
 
-            <div id="emergency-info" class="mt-8 bg-black/40 p-8 rounded-3xl border border-red-500/20 text-left">
-                <h4 class="text-xl font-bold mb-4 text-red-400">Как добавить вручную через Happ Plus:</h4>
-                <ol class="list-decimal list-inside space-y-3 text-gray-300">
-                    <li>Нажмите на одну из кнопок выше (ссылка скопируется автоматически).</li>
-                    <li>Откройте приложение <span class="text-blue-400 font-bold">Happ Plus</span>.</li>
-                    <li>В правом верхнем углу нажмите на иконку <span class="font-bold text-white"><i class="fas fa-plus"></i> Плюс</span>.</li>
-                    <li>Выберите пункт <span class="font-bold text-white italic">«Вставить из буфера обмена»</span>.</li>
-                </ol>
+            <div id="emergency-info" class="mt-8 bg-black/60 p-10 rounded-[40px] border border-red-500/20 text-left">
+                <h4 class="text-2xl font-bold mb-6 text-red-500 italic">Инструкция по ручному добавлению:</h4>
+                
+                <div class="space-y-6 mb-10 text-gray-300 text-lg">
+                    <p>1. Нажмите кнопку ниже, чтобы <span class="text-white font-bold">скопировать</span> нужную ссылку:</p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <button onclick="copyToClipboard('https://legacyvpn.ru/pc_configs.txt')" class="copy-btn py-3 px-4 rounded-xl text-sm font-bold flex items-center justify-center gap-2">
+                            <i class="fas fa-copy"></i> Ссылка ПК
+                        </button>
+                        <button onclick="copyToClipboard('https://legacyvpn.ru/mobile_configs.txt')" class="copy-btn py-3 px-4 rounded-xl text-sm font-bold flex items-center justify-center gap-2">
+                            <i class="fas fa-copy"></i> Ссылка Тел
+                        </button>
+                        <button onclick="copyToClipboard('https://legacyvpn.ru/whitelist_configs.txt')" class="copy-btn py-3 px-4 rounded-xl text-sm font-bold flex items-center justify-center gap-2">
+                            <i class="fas fa-copy"></i> Ссылка White
+                        </button>
+                    </div>
+
+                    <p>2. Откройте <span class="text-blue-400 font-bold">Happ Plus</span>.</p>
+                    <p>3. Нажмите <span class="font-bold text-white"><i class="fas fa-plus"></i> Плюс</span> в углу -> <span class="italic text-white">«Вставить из буфера обмена»</span>.</p>
+                </div>
             </div>
         </div>
 
         <div class="text-gray-600 text-xl font-light">
-            Связь с разработчиком: <a href="https://t.me/LegacyVPNHelper" target="_blank" class="text-blue-400 hover:underline">@LegacyVPNHelper</a>
+            Поддержка: <a href="https://t.me/LegacyVPNHelper" target="_blank" class="text-blue-400 hover:underline">@LegacyVPNHelper</a>
         </div>
     </div>
 
-    <footer class="py-12 text-center text-gray-800 text-xs uppercase tracking-widest border-t border-white/5 mt-10">
-        &copy; 2026 LegacyVPN Project • Novokuznetsk
+    <footer class="py-12 text-center text-gray-800 text-xs uppercase tracking-widest border-t border-white/5 mt-10 font-bold">
+        &copy; 2026 LegacyVPN Project • Novokuznetsk • Sweden Node
     </footer>
 
     <script>
-        function copyLink(url) {
-            navigator.clipboard.writeText(url).then(() => {
-                alert('Ссылка скопирована! Теперь вставьте её в Happ Plus через "+".');
-            });
+        function toggleEmergency() {
+            document.getElementById('emergency-info').classList.toggle('active');
         }
 
-        function toggleEmergency() {
-            const info = document.getElementById('emergency-info');
-            info.classList.toggle('active');
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Ссылка скопирована! Теперь вставьте её в Happ через "+".');
+            });
         }
     </script>
 </body>
