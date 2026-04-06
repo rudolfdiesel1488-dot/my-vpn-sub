@@ -4,156 +4,162 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="yandex-verification" content="a4672cd4a6a61353" />
-
     <title>LegacyVPN — Твоя свобода здесь</title>
-    <meta name="description" content="LegacyVPN — быстрый и безопасный VPN с протоколом VLESS Reality. Личные серверы в Европе, обход блокировок и полная анонимность.">
-    <meta name="keywords" content="VPN, VLESS, Reality, обход блокировок, купить vpn, быстрый впн, швеция впн, впн для happ, бесплатный впн, vpn для happ, бесплатный vpn, ">
-    <meta name="robots" content="index, follow">
-
-    <meta property="og:title" content="LegacyVPN — Твоя свобода здесь">
-    <meta property="og:description" content="Зашифрованные подписки RSA-4096. Скорость до 300 Мбит/с.">
-    <meta property="og:image" content="https://legacyvpn.ru/icon.png"> 
-    <meta property="og:url" content="https://legacyvpn.ru">
-
+    
+    <meta name="description" content="LegacyVPN — профессиональный доступ с протоколом VLESS Reality. 40 серверов, RSA-4096 шифрование.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
     <style>
         body { background-color: #050810; color: white; overflow-x: hidden; scroll-behavior: smooth; }
         
         .neon-card {
-            background: #0f172a;
-            border: 1px solid rgba(59, 130, 246, 0.15);
-            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(59, 130, 246, 0.1);
+            transition: all 0.4s ease;
         }
         .neon-card:hover {
-            transform: scale(1.08) translateY(-5px);
+            transform: translateY(-10px);
             border-color: #3b82f6;
-            box-shadow: 0 0 40px rgba(59, 130, 246, 0.5);
+            box-shadow: 0 0 30px rgba(59, 130, 246, 0.3);
+        }
+
+        .hero-title {
+            background: linear-gradient(to right, #fff 20%, #3b82f6 80%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .btn-glow {
             transition: 0.3s;
-            box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.2);
         }
         .btn-glow:hover {
-            box-shadow: 0 0 30px rgba(59, 130, 246, 0.7);
-            transform: translateY(-2px);
+            box-shadow: 0 0 30px rgba(59, 130, 246, 0.5);
         }
 
-        .copy-btn {
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.1);
-            transition: 0.2s;
-        }
-        .copy-btn:hover { background: rgba(255,255,255,0.15); border-color: white; }
-
-        #emergency-info { display: none; }
-        #emergency-info.active { display: block; animation: slideDown 0.4s ease-out; }
-
-        @keyframes slideDown {
-            from { opacity: 0; transform: translateY(-20px); }
+        /* Кастомная анимка для заголовка */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
         }
+        .animate-hero { animation: fadeInUp 1s ease-out forwards; }
     </style>
 </head>
 <body class="font-sans antialiased">
 
-    <div class="max-w-6xl mx-auto px-6 pt-20 pb-16 text-center">
-        <h1 class="text-6xl md:text-8xl font-extrabold mb-8 italic tracking-tighter leading-none text-white">
-            LegacyVPN <span class="text-blue-500">—</span> твоя свобода здесь.
-        </h1>
-        <p class="text-gray-400 text-2xl max-w-3xl mx-auto mb-20 font-light">
-            40 быстрых серверов. VLESS + Reality. Скорость 300 Мбит/с. <br>
-            <span class="text-blue-400 font-bold text-sm uppercase tracking-widest">RSA-4096 Encrypted</span>
-        </p>
+    <nav class="fixed w-full z-50 bg-[#050810]/80 backdrop-blur-md border-b border-white/5 py-4 px-6">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="text-2xl font-black italic tracking-tighter">LEGACY<span class="text-blue-500 text-3xl">.</span></div>
+            <a href="https://t.me/LegacyVPNHelper" class="text-sm font-bold text-blue-400 hover:text-white transition uppercase tracking-widest">Support</a>
+        </div>
+    </nav>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-28">
-            <div class="neon-card p-10 rounded-[32px] text-left">
-                <i class="fas fa-code text-blue-500 text-4xl mb-6"></i>
-                <h3 class="font-bold text-2xl mb-3">Open Source</h3>
-                <p class="text-gray-400 text-base">Открытый код на GitHub. Проверяй и доверяй.</p>
-            </div>
-            <div class="neon-card p-10 rounded-[32px] text-left">
-                <i class="fas fa-gauge-high text-blue-500 text-4xl mb-6"></i>
-                <h3 class="font-bold text-2xl mb-3">High Speed</h3>
-                <p class="text-gray-400 text-base">300 Мбит/с. Видео в 4K без лагов и задержек.</p>
-            </div>
-            <div class="neon-card p-10 rounded-[32px] text-left">
-                <i class="fas fa-globe text-blue-500 text-4xl mb-6"></i>
-                <h3 class="font-bold text-2xl mb-3">Много серверов</h3>
-                <p class="text-gray-400 text-base">Финляндия, Германия, Нидерланды. Прямые каналы.</p>
-            </div>
-            <div class="neon-card p-10 rounded-[32px] text-left">
-                <i class="fas fa-user-shield text-blue-500 text-4xl mb-6"></i>
-                <h3 class="font-bold text-2xl mb-3">Никаких ботов</h3>
-                <p class="text-gray-400 text-base">Всё управление только через этот сайт. Без посредников.</p>
+    <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
+        <div class="animate-hero">
+            <h1 class="text-7xl md:text-9xl font-black italic tracking-tighter mb-2 hero-title">LegacyVPN</h1>
+            <h2 class="text-3xl md:text-5xl font-bold text-gray-300 mb-8 tracking-tight">Твоя свобода здесь.</h2>
+            <p class="text-gray-500 text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+                40 элитных серверов. Протоколы следующего поколения <span class="text-blue-500 font-bold">VLESS + Reality</span>. 
+                <br>Бескомпромиссная скорость 300 Мбит/с.
+            </p>
+            <div class="inline-block px-4 py-1 border border-blue-500/30 rounded-full text-xs font-bold text-blue-400 uppercase tracking-widest mb-12">
+                RSA-4096 Military Grade Encryption
             </div>
         </div>
+    </section>
 
-        <div class="bg-blue-600/10 border border-blue-500/20 rounded-[48px] p-12 max-w-5xl mx-auto mb-10 shadow-2xl">
-            <h2 class="text-4xl font-extrabold mb-10 italic uppercase">Быстрый запуск в Happ</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                
-                <a href="happ://crypt5/hfqa7lDrLnHLnx35lP88lVdFN99B+Y8mNbmYaTiM0bAZ4SIK3aujrVNpo1ENRtKGagkxjFWeTLnhfMMLrsAupfnCIxM7aXnpdI9CvIBo=Lg=L8alnxOCIEOZ2mlm4fH0C7HFNlw17b9Q6qaMcFuhXnDiaQ9Bo9hDPsm6qCc3mGqQ5QeTekVVIuwLEDfDZ8rIv+2fQ0t9cdOccE1O3DB/l/N63vz0VLnAVHEZZc713n9GfivqyowxoZ6SHPWYAIaJ/8UBodvjARrr9g7sYIVw4/7wQeyPr0P3H8yRivkvjAlzRK5z59tvjlaO6aZc3rU+FLvPcpcpiTwXa1Wj+IgXw7YnVRbzDKGxs8Z7bNRp6mh5Aur0AJfnkYo7WvDh1+F4Eh+uEI7o3yL6dcQSQMdPof51NfDN+jVipyZ9WH9VBPpHvsL+7loo/YbshafJOn9fS/OpZTd4OX9I2Dewh0SBlZL3c87y0q3QTDwikZ6Q8AX9OXTm+xMeXUgFRITqZseHUqwsVt9C6EjWNPTHAZSvUqMBr2C2WxEZ6N0LheHtviFno8rjs//Xl5MtNa23D8XfwDuSeEVDRLanDbKOb8RyMTrZqW7287/QWvkTeuFnZPlOJltyrCQQ9uUXnIM4f3GisOkXiCzC4YeCh1w1hRe7n97mThFVPxGMwoDdkRJpeROyIewl0AlrsJxRODNajswLF5yAylAC9c+WAqEo1U+tKhGlfdk+0K/9S6d5GLz00eC5As5CaEE+UkxIWzLTzKYhKaPg5VE+BR6ZIjq0Hpoh=t/Irxc" class="btn-glow bg-blue-600 p-6 rounded-2xl font-black text-xl flex items-center justify-center gap-3 active:scale-95 transition">
-                    <i class="fas fa-desktop text-white"></i> В Happ (ПК)
-                </a>
-
-                <a href="happ://crypt5/hfqasVygzGzy6uBmkI92wQyNNhbXfn3T/hrlqFQXXSKuAX5RhCB69dQc7pwzo+l5d0X5FF74VgN2dr8y76D0+MIQJYMdvLGh5x15KUx6l93h=D1k1yupu3SAwkgrEV4NPumlLl8lwUrRSEDjzMBqWL6Z5p52J/Rs4wdTY5vPBeLVDhZJr3IaRTeFHo53VzbyfTNif0BfjpEK0tlowAHxdxcB9eqEClUup0ODTNR5LUHk9XmtoAwbogZnt9iYFYwwqOSMYcQ6tJ9h4ODK+Qd4fnOtFBWDXCwKe5MOuYDxxRzcINwdj5ydtf08Vk2sUWXE+MUYXGvknYxdnZrG9LltmWcb0rR/9KzcT0/30BcTZZZ8tBEraHN6yaS4izLiPWoP7rcxW+avwrC8E4xSRRiPuX9QW8EBUCDtk6ZF8FkujjarUWrf0d0dxWmOoZ8gCe/U1o+Q2sEPt3BFGLnEF0EEbFGxGOYTlLd81dB/MY2rfIdy2alSclOyPutMXUQEdNZOaS6u7wiTd8XtAcCvSkFpUnukplcZ/nhnMrpJWFtrkGBeRLrTWjtYDNVYG2Azk8MKYrNa9PC44y73BL1c6EJ5hobvJi6DJ/HnKPqZpH8SiB5vYXDgpDsiCiPObOG2lUoW7V+u0dDDOo49B/1F+poBR3J3sPND9mvUxytFttsx+f5frNY5NJWi1AmuYX9tzbVXKWYVVBW4zMG1tLFO/Vh3nxxYzeuiKio9rMzF4PQS3DYKUyBvOsM+QMy06I88jAlbKgWGMBVWOYTleZCcZCHWvJ7y=tlYrxc" class="btn-glow bg-blue-600 p-6 rounded-2xl font-black text-xl flex items-center justify-center gap-3 active:scale-95 transition">
-                    <i class="fas fa-mobile-alt text-white"></i> В Happ (Тел)
-                </a>
-
-                <a href="happ://crypt5/hfqa31NW8Hs1DCScd596BqpdGqD+ytYH6rar7qxWQaZ0f1v9r5vGcm9pS+dyvBLYMcKG2FvThV+vY8VmJRriEQNAUPUfwNQ2TKHlETDUpoUH0ToIFEvCj4mLRyR2YGx6hAiFMnif6o1ZhviY/7kBHElWmkKVW+3CnXga1Itl1M7oOq/cZymm9SqqCY6hDe04cl+j33F1GwpLDAvuQr+KwLCWlSdozvfTsKouwrCBq+TMqh4rE96NU6Uy003G2xGHznrQ45FDnsHafOzoEj3tfb7IQzXbYzTEuqx9ji7J+km+/Sru9vbkhXMkQcfI65V1PusuSRTOWOUqYGlWHQObkBWmWyyu4bN+oVx8Hlc3X8jp1CfQ6YtS6ZbNi/y22+M/erlhcMKTVDivtiTpBkgjOPhVvtgvSyHlzDQ618hjig0FW+XPr9v9qSeRtsOm9giN5uYZNsmuNyHjx20Dpphv2u1tWWkSrCsSxGTd7OOrr8TdoOXgNAdxLQoiZKXAptyXaEyIj6+4GhuGaM0gM0pbBdTCuHfSjtS5OOFp/JykMPhEblba8WaO6sl+DrOzvYhpA1U+ZmqJGhB38lqB2iuGsUzKNJBGyXGzNmR4cConuOQgWGVd/W1uACw34t0N/6T4Cg75xCNz2nuhgy8K9eP+3RPPF+A3pfmWbNNF18aSuHU9fEAvf8BwWSGSK0ZkW281UgqH+GilA+zbgjx73h7RQkQCLk120icaAG1LxYPdXy41pT9I5oAa2u97e8YcnfpPX6z1OgtYi1zKNEsXS5rufRZSffyC=tx0rxc" class="btn-glow bg-green-600 p-6 rounded-2xl font-black text-xl flex items-center justify-center gap-3 active:scale-95 transition text-white">
-                    <i class="fas fa-shield-halved"></i> В Happ (Whitelist)
-                </a>
-            </div>
-
-            <button onclick="toggleEmergency()" class="mt-12 text-red-400 font-bold hover:text-red-300 transition flex items-center justify-center gap-2 mx-auto uppercase tracking-tighter text-sm border-b border-red-500/30 pb-1">
-                <i class="fas fa-triangle-exclamation text-red-500"></i> Если кнопки выше не сработали
-            </button>
-
-            <div id="emergency-info" class="mt-8 bg-black/60 p-10 rounded-[40px] border border-red-500/20 text-left">
-                <h4 class="text-2xl font-bold mb-6 text-red-500 italic uppercase">Инструкция по ручному вводу:</h4>
-                
-                <div class="space-y-6 mb-10 text-gray-300 text-lg">
-                    <p>1. Скопируйте нужную ссылку (открытый формат):</p>
-                    
-                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                        <button onclick="copyToClipboard('https://legacyvpn.ru/pc_configs.txt')" class="copy-btn py-4 px-4 rounded-xl text-sm font-bold flex items-center justify-center gap-2">
-                            <i class="fas fa-copy text-blue-400"></i> Ссылка ПК
-                        </button>
-                        <button onclick="copyToClipboard('https://legacyvpn.ru/mobile_configs.txt')" class="copy-btn py-4 px-4 rounded-xl text-sm font-bold flex items-center justify-center gap-2">
-                            <i class="fas fa-copy text-blue-400"></i> Ссылка Тел
-                        </button>
-                        <button onclick="copyToClipboard('https://legacyvpn.ru/whitelist_configs.txt')" class="copy-btn py-4 px-4 rounded-xl text-sm font-bold flex items-center justify-center gap-2">
-                            <i class="fas fa-copy text-blue-400"></i> Ссылка Whitelist
-                        </button>
-                    </div>
-
-                    <p>2. Откройте <span class="text-blue-400 font-bold">Happ Plus</span>.</p>
-                    <p>3. Нажмите <span class="font-bold text-white"><i class="fas fa-plus"></i> Плюс</span> -> <span class="italic text-white">«Вставить из буфера обмена»</span>.</p>
+    <section class="max-w-6xl mx-auto px-6 py-20">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="neon-card p-8 rounded-[2rem]" data-aos="fade-up" data-aos-delay="100">
+                <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6">
+                    <i class="fas fa-fingerprint text-blue-500 text-xl"></i>
                 </div>
+                <h3 class="font-bold text-xl mb-3">No Logs Policy</h3>
+                <p class="text-gray-500 text-sm">Мы не храним историю посещений. Твои данные принадлежат только тебе.</p>
+            </div>
+            <div class="neon-card p-8 rounded-[2rem]" data-aos="fade-up" data-aos-delay="200">
+                <div class="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mb-6">
+                    <i class="fas fa-shield-virus text-purple-500 text-xl"></i>
+                </div>
+                <h3 class="font-bold text-xl mb-3">Anti-Deep Packet</h3>
+                <p class="text-gray-500 text-sm">Технология Reality делает твой трафик невидимым для систем DPI и цензуры.</p>
+            </div>
+            <div class="neon-card p-8 rounded-[2rem]" data-aos="fade-up" data-aos-delay="300">
+                <div class="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center mb-6">
+                    <i class="fas fa-microchip text-green-500 text-xl"></i>
+                </div>
+                <h3 class="font-bold text-xl mb-3">Bare Metal Nodes</h3>
+                <p class="text-gray-500 text-sm">Используем выделенное железо в Стокгольме и Германии для минимального пинга.</p>
+            </div>
+            <div class="neon-card p-8 rounded-[2rem]" data-aos="fade-up" data-aos-delay="400">
+                <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center mb-6">
+                    <i class="fas fa-infinity text-orange-500 text-xl"></i>
+                </div>
+                <h3 class="font-bold text-xl mb-3">Unlimited Data</h3>
+                <p class="text-gray-400 text-sm">Никаких лимитов на трафик. Качай, стримь и играй сколько хочешь.</p>
             </div>
         </div>
+    </section>
 
-        <div class="text-gray-600 text-xl font-light">
-            Поддержка проекта: <a href="https://t.me/LegacyVPNHelper" target="_blank" class="text-blue-400 hover:underline">@LegacyVPNHelper</a>
+    <section class="max-w-4xl mx-auto px-6 py-20 text-center" data-aos="zoom-in">
+        <h2 class="text-3xl font-bold mb-12 italic">Один аккаунт — все устройства</h2>
+        <div class="flex flex-wrap justify-center gap-12 text-gray-500 opacity-60">
+            <div class="flex flex-col items-center gap-2">
+                <i class="fab fa-apple text-5xl"></i>
+                <span class="text-xs uppercase font-bold">iOS / Mac</span>
+            </div>
+            <div class="flex flex-col items-center gap-2">
+                <i class="fab fa-android text-5xl"></i>
+                <span class="text-xs uppercase font-bold">Android</span>
+            </div>
+            <div class="flex flex-col items-center gap-2">
+                <i class="fab fa-windows text-5xl"></i>
+                <span class="text-xs uppercase font-bold">Windows</span>
+            </div>
+            <div class="flex flex-col items-center gap-2">
+                <i class="fab fa-linux text-5xl"></i>
+                <span class="text-xs uppercase font-bold">Linux</span>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <footer class="py-12 text-center text-gray-800 text-xs uppercase tracking-widest border-t border-white/5 mt-10 font-bold">
-        &copy; 2026 LegacyVPN Project • Made for you <3
+    <section class="max-w-5xl mx-auto px-6 py-20 mb-20" data-aos="fade-up">
+        <div class="bg-gradient-to-br from-blue-600/20 to-transparent border border-blue-500/20 rounded-[3rem] p-12 text-center shadow-3xl">
+            <h2 class="text-4xl font-black mb-12 italic tracking-tighter uppercase">Активация доступа</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <a href="happ://crypt5/hfqa7lDrLnHLnx35lP88lVdFN99B+Y8mNbmYaTiM0bAZ4SIK3aujrVNpo1ENRtKGagkxjFWeTLnhfMMLrsAupfnCIxM7aXnpdI9CvIBo=Lg=L8alnxOCIEOZ2mlm4fH0C7HFNlw17b9Q6qaMcFuhXnDiaQ9Bo9hDPsm6qCc3mGqQ5QeTekVVIuwLEDfDZ8rIv+2fQ0t9cdOccE1O3DB/l/N63vz0VLnAVHEZZc713n9GfivqyowxoZ6SHPWYAIaJ/8UBodvjARrr9g7sYIVw4/7wQeyPr0P3H8yRivkvjAlzRK5z59tvjlaO6aZc3rU+FLvPcpcpiTwXa1Wj+IgXw7YnVRbzDKGxs8Z7bNRp6mh5Aur0AJfnkYo7WvDh1+F4Eh+uEI7o3yL6dcQSQMdPof51NfDN+jVipyZ9WH9VBPpHvsL+7loo/YbshafJOn9fS/OpZTd4OX9I2Dewh0SBlZL3c87y0q3QTDwikZ6Q8AX9OXTm+xMeXUgFRITqZseHUqwsVt9C6EjWNPTHAZSvUqMBr2C2WxEZ6N0LheHtviFno8rjs//Xl5MtNa23D8XfwDuSeEVDRLanDbKOb8RyMTrZqW7287/QWvkTeuFnZPlOJltyrCQQ9uUXnIM4f3GisOkXiCzC4YeCh1w1hRe7n97mThFVPxGMwoDdkRJpeROyIewl0AlrsJxRODNajswLF5yAylAC9c+WAqEo1U+tKhGlfdk+0K/9S6d5GLz00eC5As5CaEE+UkxIWzLTzKYhKaPg5VE+BR6ZIjq0Hpoh=t/Irxc" class="btn-glow bg-blue-600 p-6 rounded-2xl font-black text-xl flex items-center justify-center gap-3 active:scale-95 transition">
+                    <i class="fas fa-desktop"></i> macOS / PC
+                </a>
+                <a href="happ://crypt5/hfqasVygzGzy6uBmkI92wQyNNhbXfn3T/hrlqFQXXSKuAX5RhCB69dQc7pwzo+l5d0X5FF74VgN2dr8y76D0+MIQJYMdvLGh5x15KUx6l93h=D1k1yupu3SAwkgrEV4NPumlLl8lwUrRSEDjzMBqWL6Z5p52J/Rs4wdTY5vPBeLVDhZJr3IaRTeFHo53VzbyfTNif0BfjpEK0tlowAHxdxcB9eqEClUup0ODTNR5LUHk9XmtoAwbogZnt9iYFYwwqOSMYcQ6tJ9h4ODK+Qd4fnOtFBWDXCwKe5MOuYDxxRzcINwdj5ydtf08Vk2sUWXE+MUYXGvknYxdnZrG9LltmWcb0rR/9KzcT0/30BcTZZZ8tBEraHN6yaS4izLiPWoP7rcxW+avwrC8E4xSRRiPuX9QW8EBUCDtk6ZF8FkujjarUWrf0d0dxWmOoZ8gCe/U1o+Q2sEPt3BFGLnEF0EEbFGxGOYTlLd81dB/MY2rfIdy2alSclOyPutMXUQEdNZOaS6u7wiTd8XtAcCvSkFpUnukplcZ/nhnMrpJWFtrkGBeRLrTWjtYDNVYG2Azk8MKYrNa9PC44y73BL1c6EJ5hobvJi6DJ/HnKPqZpH8SiB5vYXDgpDsiCiPObOG2lUoW7V+u0dDDOo49B/1F+poBR3J3sPND9mvUxytFttsx+f5frNY5NJWi1AmuYX9tzbVXKWYVVBW4zMG1tLFO/Vh3nxxYzeuiKio9rMzF4PQS3DYKUyBvOsM+QMy06I88jAlbKgWGMBVWOYTleZCcZCHWvJ7y=tlYrxc" class="btn-glow bg-blue-600 p-6 rounded-2xl font-black text-xl flex items-center justify-center gap-3 active:scale-95 transition">
+                    <i class="fas fa-mobile-alt"></i> Mobile
+                </a>
+                <a href="happ://crypt5/hfqa31NW8Hs1DCScd596BqpdGqD+ytYH6rar7qxWQaZ0f1v9r5vGcm9pS+dyvBLYMcKG2FvThV+vY8VmJRriEQNAUPUfwNQ2TKHlETDUpoUH0ToIFEvCj4mLRyR2YGx6hAiFMnif6o1ZhviY/7kBHElWmkKVW+3CnXga1Itl1M7oOq/cZymm9SqqCY6hDe04cl+j33F1GwpLDAvuQr+KwLCWlSdozvfTsKouwrCBq+TMqh4rE96NU6Uy003G2xGHznrQ45FDnsHafOzoEj3tfb7IQzXbYzTEuqx9ji7J+km+/Sru9vbkhXMkQcfI65V1PusuSRTOWOUqYGlWHQObkBWmWyyu4bN+oVx8Hlc3X8jp1CfQ6YtS6ZbNi/y22+M/erlhcMKTVDivtiTpBkgjOPhVvtgvSyHlzDQ618hjig0FW+XPr9v9qSeRtsOm9giN5uYZNsmuNyHjx20Dpphv2u1tWWkSrCsSxGTd7OOrr8TdoOXgNAdxLQoiZKXAptyXaEyIj6+4GhuGaM0gM0pbBdTCuHfSjtS5OOFp/JykMPhEblba8WaO6sl+DrOzvYhpA1U+ZmqJGhB38lqB2iuGsUzKNJBGyXGzNmR4cConuOQgWGVd/W1uACw34t0N/6T4Cg75xCNz2nuhgy8K9eP+3RPPF+A3pfmWbNNF18aSuHU9fEAvf8BwWSGSK0ZkW281UgqH+GilA+zbgjx73h7RQkQCLk120icaAG1LxYPdXy41pT9I5oAa2u97e8YcnfpPX6z1OgtYi1zKNEsXS5rufRZSffyC=tx0rxc" class="btn-glow bg-green-600 p-6 rounded-2xl font-black text-xl flex items-center justify-center gap-3 active:scale-95 transition">
+                    <i class="fas fa-shield-halved"></i> Whitelist
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-white/5 text-center px-6">
+        <div class="text-2xl font-black italic mb-4">LEGACY<span class="text-blue-500">.</span></div>
+        <p class="text-gray-600 text-xs uppercase tracking-[0.3em] mb-4">Sweden Infrastructure • 2026</p>
+        <div class="flex justify-center gap-6 text-gray-500 text-sm">
+            <a href="https://t.me/LegacyVPNHelper" class="hover:text-white transition">Telegram</a>
+            <a href="#" class="hover:text-white transition">Status</a>
+            <a href="#" class="hover:text-white transition">Nodes</a>
+        </div>
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        function toggleEmergency() {
-            document.getElementById('emergency-info').classList.toggle('active');
-        }
-
-        function copyToClipboard(text) {
-            navigator.clipboard.writeText(text).then(() => {
-                alert('Ссылка успешно скопирована! Вставьте её в Happ Plus.');
-            });
-        }
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
     </script>
 </body>
 </html>
