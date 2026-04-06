@@ -6,7 +6,6 @@
     <meta name="yandex-verification" content="a4672cd4a6a61353" />
     <title>LegacyVPN — Твоя свобода здесь</title>
     
-    <meta name="description" content="LegacyVPN — профессиональный доступ с протоколом VLESS Reality. 40 серверов, RSA-4096 шифрование.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -15,10 +14,10 @@
         body { background-color: #050810; color: white; overflow-x: hidden; scroll-behavior: smooth; }
         
         .neon-card {
-            background: rgba(15, 23, 42, 0.6);
+            background: rgba(15, 23, 42, 0.4);
             backdrop-filter: blur(12px);
             border: 1px solid rgba(59, 130, 246, 0.1);
-            transition: all 0.4s ease;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .neon-card:hover {
             transform: translateY(-10px);
@@ -27,9 +26,23 @@
         }
 
         .hero-title {
-            background: linear-gradient(to right, #fff 20%, #3b82f6 80%);
+            background: linear-gradient(to bottom, #fff 30%, #3b82f6 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+        }
+
+        /* Анимация иконок платформ */
+        .platform-icon {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            color: #4b5563; /* Серый по дефолту */
+        }
+        .platform-item:hover .platform-icon {
+            color: #3b82f6;
+            transform: scale(1.3);
+            filter: drop-shadow(0 0 15px #3b82f6);
+        }
+        .platform-item:hover span {
+            color: #fff;
         }
 
         .btn-glow {
@@ -37,129 +50,144 @@
             box-shadow: 0 0 15px rgba(59, 130, 246, 0.2);
         }
         .btn-glow:hover {
-            box-shadow: 0 0 30px rgba(59, 130, 246, 0.5);
+            box-shadow: 0 0 40px rgba(59, 130, 246, 0.6);
+            transform: scale(1.02);
         }
 
-        /* Кастомная анимка для заголовка */
         @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
+            from { opacity: 0; transform: translateY(40px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        .animate-hero { animation: fadeInUp 1s ease-out forwards; }
+        .animate-hero { animation: fadeInUp 1.2s ease-out forwards; }
+
+        .feature-tag {
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+        }
     </style>
 </head>
 <body class="font-sans antialiased">
 
-    <nav class="fixed w-full z-50 bg-[#050810]/80 backdrop-blur-md border-b border-white/5 py-4 px-6">
-        <div class="max-w-6xl mx-auto flex justify-between items-center">
-            <div class="text-2xl font-black italic tracking-tighter">LEGACY<span class="text-blue-500 text-3xl">.</span></div>
-            <a href="https://t.me/LegacyVPNHelper" class="text-sm font-bold text-blue-400 hover:text-white transition uppercase tracking-widest">Support</a>
-        </div>
-    </nav>
-
-    <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
+    <section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
         <div class="animate-hero">
-            <h1 class="text-7xl md:text-9xl font-black italic tracking-tighter mb-2 hero-title">LegacyVPN</h1>
-            <h2 class="text-3xl md:text-5xl font-bold text-gray-300 mb-8 tracking-tight">Твоя свобода здесь.</h2>
-            <p class="text-gray-500 text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-                40 элитных серверов. Протоколы следующего поколения <span class="text-blue-500 font-bold">VLESS + Reality</span>. 
-                <br>Бескомпромиссная скорость 300 Мбит/с.
+            <h1 class="text-8xl md:text-[12rem] font-black italic tracking-tighter mb-4 hero-title">LegacyVPN</h1>
+            <h2 class="text-4xl md:text-6xl font-bold text-white mb-8 tracking-tight uppercase">Твоя свобода здесь.</h2>
+            <p class="text-gray-400 text-xl max-w-3xl mx-auto mb-10 font-light leading-relaxed">
+                Забудь про платные подписки. <span class="text-blue-500 font-bold underline">100% Бесплатно</span>. 
+                <br>Профессиональный VLESS + Reality туннель для тех, кто понимает в технологиях.
             </p>
-            <div class="inline-block px-4 py-1 border border-blue-500/30 rounded-full text-xs font-bold text-blue-400 uppercase tracking-widest mb-12">
-                RSA-4096 Military Grade Encryption
+            <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+                <div class="px-6 py-2 feature-tag rounded-full text-xs font-bold text-blue-400 uppercase tracking-widest">
+                    <i class="fas fa-lock mr-2"></i> RSA-4096 Encrypted
+                </div>
+                <div class="px-6 py-2 feature-tag rounded-full text-xs font-bold text-green-400 uppercase tracking-widest border-green-500/30 bg-green-500/10">
+                    <i class="fas fa-check-double mr-2"></i> Anti-DPI Stealth Mode
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="max-w-6xl mx-auto px-6 py-20">
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="neon-card p-8 rounded-[2rem]" data-aos="fade-up" data-aos-delay="100">
-                <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6">
-                    <i class="fas fa-fingerprint text-blue-500 text-xl"></i>
-                </div>
-                <h3 class="font-bold text-xl mb-3">No Logs Policy</h3>
-                <p class="text-gray-500 text-sm">Мы не храним историю посещений. Твои данные принадлежат только тебе.</p>
+    <section class="max-w-6xl mx-auto px-6 py-24 border-t border-white/5">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div data-aos="fade-right">
+                <h2 class="text-4xl font-black italic mb-6 uppercase tracking-tighter">Шифрование RSA-4096</h2>
+                <p class="text-gray-400 text-lg leading-relaxed mb-6">
+                    Каждая подписка LegacyVPN проходит через API-шифрование <span class="text-white font-bold">RSA с ключом 4096 бит</span>. Это означает, что данные вашей конфигурации невозможно перехватить или прочитать без вашего устройства. Даже РКН не видит конечные IP-адреса серверов.
+                </p>
+                <ul class="space-y-4 text-sm font-bold uppercase tracking-wider text-blue-400">
+                    <li><i class="fas fa-shield-halved mr-3"></i> Защита от перехвата в публичном Wi-Fi</li>
+                    <li><i class="fas fa-key mr-3"></i> Динамическая смена ключей доступа</li>
+                </ul>
             </div>
-            <div class="neon-card p-8 rounded-[2rem]" data-aos="fade-up" data-aos-delay="200">
-                <div class="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mb-6">
-                    <i class="fas fa-shield-virus text-purple-500 text-xl"></i>
+            <div class="grid grid-cols-2 gap-4" data-aos="fade-left">
+                <div class="neon-card p-8 rounded-3xl">
+                    <h4 class="font-black text-3xl text-blue-500 mb-2">0%</h4>
+                    <p class="text-xs text-gray-500 font-bold uppercase">Шанс взлома</p>
                 </div>
-                <h3 class="font-bold text-xl mb-3">Anti-Deep Packet</h3>
-                <p class="text-gray-500 text-sm">Технология Reality делает твой трафик невидимым для систем DPI и цензуры.</p>
-            </div>
-            <div class="neon-card p-8 rounded-[2rem]" data-aos="fade-up" data-aos-delay="300">
-                <div class="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center mb-6">
-                    <i class="fas fa-microchip text-green-500 text-xl"></i>
+                <div class="neon-card p-8 rounded-3xl">
+                    <h4 class="font-black text-3xl text-blue-500 mb-2">10Gbps</h4>
+                    <p class="text-xs text-gray-500 font-bold uppercase">Каналы связи</p>
                 </div>
-                <h3 class="font-bold text-xl mb-3">Bare Metal Nodes</h3>
-                <p class="text-gray-500 text-sm">Используем выделенное железо в Стокгольме и Германии для минимального пинга.</p>
-            </div>
-            <div class="neon-card p-8 rounded-[2rem]" data-aos="fade-up" data-aos-delay="400">
-                <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center mb-6">
-                    <i class="fas fa-infinity text-orange-500 text-xl"></i>
-                </div>
-                <h3 class="font-bold text-xl mb-3">Unlimited Data</h3>
-                <p class="text-gray-400 text-sm">Никаких лимитов на трафик. Качай, стримь и играй сколько хочешь.</p>
             </div>
         </div>
     </section>
 
-    <section class="max-w-4xl mx-auto px-6 py-20 text-center" data-aos="zoom-in">
-        <h2 class="text-3xl font-bold mb-12 italic">Один аккаунт — все устройства</h2>
-        <div class="flex flex-wrap justify-center gap-12 text-gray-500 opacity-60">
-            <div class="flex flex-col items-center gap-2">
-                <i class="fab fa-apple text-5xl"></i>
-                <span class="text-xs uppercase font-bold">iOS / Mac</span>
+    <section class="max-w-6xl mx-auto px-6 py-20 text-center">
+        <h2 class="text-2xl font-bold mb-16 uppercase tracking-[0.4em] text-gray-500" data-aos="fade-up">Доступно на всех платформах</h2>
+        <div class="flex flex-wrap justify-center gap-16 md:gap-24">
+            <div class="platform-item flex flex-col items-center gap-4 cursor-pointer" data-aos="zoom-in" data-aos-delay="100">
+                <i class="fab fa-apple platform-icon text-6xl"></i>
+                <span class="text-[10px] uppercase font-black tracking-widest text-gray-600 transition">iOS / macOS</span>
             </div>
-            <div class="flex flex-col items-center gap-2">
-                <i class="fab fa-android text-5xl"></i>
-                <span class="text-xs uppercase font-bold">Android</span>
+            <div class="platform-item flex flex-col items-center gap-4 cursor-pointer" data-aos="zoom-in" data-aos-delay="200">
+                <i class="fab fa-android platform-icon text-6xl"></i>
+                <span class="text-[10px] uppercase font-black tracking-widest text-gray-600 transition">Android</span>
             </div>
-            <div class="flex flex-col items-center gap-2">
-                <i class="fab fa-windows text-5xl"></i>
-                <span class="text-xs uppercase font-bold">Windows</span>
+            <div class="platform-item flex flex-col items-center gap-4 cursor-pointer" data-aos="zoom-in" data-aos-delay="300">
+                <i class="fab fa-windows platform-icon text-6xl"></i>
+                <span class="text-[10px] uppercase font-black tracking-widest text-gray-600 transition">Windows</span>
             </div>
-            <div class="flex flex-col items-center gap-2">
-                <i class="fab fa-linux text-5xl"></i>
-                <span class="text-xs uppercase font-bold">Linux</span>
-            </div>
-        </div>
-    </section>
-
-    <section class="max-w-5xl mx-auto px-6 py-20 mb-20" data-aos="fade-up">
-        <div class="bg-gradient-to-br from-blue-600/20 to-transparent border border-blue-500/20 rounded-[3rem] p-12 text-center shadow-3xl">
-            <h2 class="text-4xl font-black mb-12 italic tracking-tighter uppercase">Активация доступа</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <a href="happ://crypt5/hfqa7lDrLnHLnx35lP88lVdFN99B+Y8mNbmYaTiM0bAZ4SIK3aujrVNpo1ENRtKGagkxjFWeTLnhfMMLrsAupfnCIxM7aXnpdI9CvIBo=Lg=L8alnxOCIEOZ2mlm4fH0C7HFNlw17b9Q6qaMcFuhXnDiaQ9Bo9hDPsm6qCc3mGqQ5QeTekVVIuwLEDfDZ8rIv+2fQ0t9cdOccE1O3DB/l/N63vz0VLnAVHEZZc713n9GfivqyowxoZ6SHPWYAIaJ/8UBodvjARrr9g7sYIVw4/7wQeyPr0P3H8yRivkvjAlzRK5z59tvjlaO6aZc3rU+FLvPcpcpiTwXa1Wj+IgXw7YnVRbzDKGxs8Z7bNRp6mh5Aur0AJfnkYo7WvDh1+F4Eh+uEI7o3yL6dcQSQMdPof51NfDN+jVipyZ9WH9VBPpHvsL+7loo/YbshafJOn9fS/OpZTd4OX9I2Dewh0SBlZL3c87y0q3QTDwikZ6Q8AX9OXTm+xMeXUgFRITqZseHUqwsVt9C6EjWNPTHAZSvUqMBr2C2WxEZ6N0LheHtviFno8rjs//Xl5MtNa23D8XfwDuSeEVDRLanDbKOb8RyMTrZqW7287/QWvkTeuFnZPlOJltyrCQQ9uUXnIM4f3GisOkXiCzC4YeCh1w1hRe7n97mThFVPxGMwoDdkRJpeROyIewl0AlrsJxRODNajswLF5yAylAC9c+WAqEo1U+tKhGlfdk+0K/9S6d5GLz00eC5As5CaEE+UkxIWzLTzKYhKaPg5VE+BR6ZIjq0Hpoh=t/Irxc" class="btn-glow bg-blue-600 p-6 rounded-2xl font-black text-xl flex items-center justify-center gap-3 active:scale-95 transition">
-                    <i class="fas fa-desktop"></i> macOS / PC
-                </a>
-                <a href="happ://crypt5/hfqasVygzGzy6uBmkI92wQyNNhbXfn3T/hrlqFQXXSKuAX5RhCB69dQc7pwzo+l5d0X5FF74VgN2dr8y76D0+MIQJYMdvLGh5x15KUx6l93h=D1k1yupu3SAwkgrEV4NPumlLl8lwUrRSEDjzMBqWL6Z5p52J/Rs4wdTY5vPBeLVDhZJr3IaRTeFHo53VzbyfTNif0BfjpEK0tlowAHxdxcB9eqEClUup0ODTNR5LUHk9XmtoAwbogZnt9iYFYwwqOSMYcQ6tJ9h4ODK+Qd4fnOtFBWDXCwKe5MOuYDxxRzcINwdj5ydtf08Vk2sUWXE+MUYXGvknYxdnZrG9LltmWcb0rR/9KzcT0/30BcTZZZ8tBEraHN6yaS4izLiPWoP7rcxW+avwrC8E4xSRRiPuX9QW8EBUCDtk6ZF8FkujjarUWrf0d0dxWmOoZ8gCe/U1o+Q2sEPt3BFGLnEF0EEbFGxGOYTlLd81dB/MY2rfIdy2alSclOyPutMXUQEdNZOaS6u7wiTd8XtAcCvSkFpUnukplcZ/nhnMrpJWFtrkGBeRLrTWjtYDNVYG2Azk8MKYrNa9PC44y73BL1c6EJ5hobvJi6DJ/HnKPqZpH8SiB5vYXDgpDsiCiPObOG2lUoW7V+u0dDDOo49B/1F+poBR3J3sPND9mvUxytFttsx+f5frNY5NJWi1AmuYX9tzbVXKWYVVBW4zMG1tLFO/Vh3nxxYzeuiKio9rMzF4PQS3DYKUyBvOsM+QMy06I88jAlbKgWGMBVWOYTleZCcZCHWvJ7y=tlYrxc" class="btn-glow bg-blue-600 p-6 rounded-2xl font-black text-xl flex items-center justify-center gap-3 active:scale-95 transition">
-                    <i class="fas fa-mobile-alt"></i> Mobile
-                </a>
-                <a href="happ://crypt5/hfqa31NW8Hs1DCScd596BqpdGqD+ytYH6rar7qxWQaZ0f1v9r5vGcm9pS+dyvBLYMcKG2FvThV+vY8VmJRriEQNAUPUfwNQ2TKHlETDUpoUH0ToIFEvCj4mLRyR2YGx6hAiFMnif6o1ZhviY/7kBHElWmkKVW+3CnXga1Itl1M7oOq/cZymm9SqqCY6hDe04cl+j33F1GwpLDAvuQr+KwLCWlSdozvfTsKouwrCBq+TMqh4rE96NU6Uy003G2xGHznrQ45FDnsHafOzoEj3tfb7IQzXbYzTEuqx9ji7J+km+/Sru9vbkhXMkQcfI65V1PusuSRTOWOUqYGlWHQObkBWmWyyu4bN+oVx8Hlc3X8jp1CfQ6YtS6ZbNi/y22+M/erlhcMKTVDivtiTpBkgjOPhVvtgvSyHlzDQ618hjig0FW+XPr9v9qSeRtsOm9giN5uYZNsmuNyHjx20Dpphv2u1tWWkSrCsSxGTd7OOrr8TdoOXgNAdxLQoiZKXAptyXaEyIj6+4GhuGaM0gM0pbBdTCuHfSjtS5OOFp/JykMPhEblba8WaO6sl+DrOzvYhpA1U+ZmqJGhB38lqB2iuGsUzKNJBGyXGzNmR4cConuOQgWGVd/W1uACw34t0N/6T4Cg75xCNz2nuhgy8K9eP+3RPPF+A3pfmWbNNF18aSuHU9fEAvf8BwWSGSK0ZkW281UgqH+GilA+zbgjx73h7RQkQCLk120icaAG1LxYPdXy41pT9I5oAa2u97e8YcnfpPX6z1OgtYi1zKNEsXS5rufRZSffyC=tx0rxc" class="btn-glow bg-green-600 p-6 rounded-2xl font-black text-xl flex items-center justify-center gap-3 active:scale-95 transition">
-                    <i class="fas fa-shield-halved"></i> Whitelist
-                </a>
+            <div class="platform-item flex flex-col items-center gap-4 cursor-pointer" data-aos="zoom-in" data-aos-delay="400">
+                <i class="fab fa-linux platform-icon text-6xl"></i>
+                <span class="text-[10px] uppercase font-black tracking-widest text-gray-600 transition">Linux</span>
             </div>
         </div>
     </section>
 
-    <footer class="py-12 border-t border-white/5 text-center px-6">
-        <div class="text-2xl font-black italic mb-4">LEGACY<span class="text-blue-500">.</span></div>
-        <p class="text-gray-600 text-xs uppercase tracking-[0.3em] mb-4">Sweden Infrastructure • 2026</p>
-        <div class="flex justify-center gap-6 text-gray-500 text-sm">
-            <a href="https://t.me/LegacyVPNHelper" class="hover:text-white transition">Telegram</a>
-            <a href="#" class="hover:text-white transition">Status</a>
-            <a href="#" class="hover:text-white transition">Nodes</a>
+    <section class="max-w-6xl mx-auto px-6 py-24 bg-[#080c14] rounded-[4rem] my-20">
+        <div class="grid md:grid-cols-3 gap-12">
+            <div class="text-left" data-aos="fade-up">
+                <i class="fas fa-ghost text-blue-500 text-3xl mb-6"></i>
+                <h3 class="text-xl font-black mb-4 uppercase italic">Anti-Fraud Система</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">
+                    Наши серверы маскируются под обычные сайты (Google, Microsoft). Системы анализа трафика видят обычный HTTPS-запрос, пропуская ваш VPN-трафик без проверок.
+                </p>
+            </div>
+            <div class="text-left" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-user-secret text-blue-500 text-3xl mb-6"></i>
+                <h3 class="text-xl font-black mb-4 uppercase italic">Приватность 2.0</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">
+                    Мы не требуем регистрации, почты или телефона. Ваша личность остается за пределами сети. Полная анонимность на уровне протокола.
+                </p>
+            </div>
+            <div class="text-left" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-star text-blue-500 text-3xl mb-6"></i>
+                <h3 class="text-xl font-black mb-4 uppercase italic">Эксклюзивные Ноды</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">
+                    Доступ к выделенным серверам в Швеции и Финляндии с низкой задержкой, которые недоступны в публичных бесплатных сервисах.
+                </p>
+            </div>
         </div>
+    </section>
+
+    <section class="max-w-5xl mx-auto px-6 py-20 mb-32" data-aos="zoom-out">
+        <div class="bg-blue-600 p-1 rounded-[3rem] shadow-[0_0_50px_rgba(59,130,246,0.3)]">
+            <div class="bg-[#050810] rounded-[2.8rem] p-16 text-center">
+                <h2 class="text-5xl font-black mb-6 italic tracking-tighter uppercase">Получить доступ сейчас</h2>
+                <p class="text-gray-400 mb-12 text-lg italic underline">Напоминаем: Наш сервис полностью бесплатен и открыт для всех.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <a href="happ://crypt5/hfqa7lDrLnHLnx35lP88lVdFN99B+Y8mNbmYaTiM0bAZ4SIK3aujrVNpo1ENRtKGagkxjFWeTLnhfMMLrsAupfnCIxM7aXnpdI9CvIBo=Lg=L8alnxOCIEOZ2mlm4fH0C7HFNlw17b9Q6qaMcFuhXnDiaQ9Bo9hDPsm6qCc3mGqQ5QeTekVVIuwLEDfDZ8rIv+2fQ0t9cdOccE1O3DB/l/N63vz0VLnAVHEZZc713n9GfivqyowxoZ6SHPWYAIaJ/8UBodvjARrr9g7sYIVw4/7wQeyPr0P3H8yRivkvjAlzRK5z59tvjlaO6aZc3rU+FLvPcpcpiTwXa1Wj+IgXw7YnVRbzDKGxs8Z7bNRp6mh5Aur0AJfnkYo7WvDh1+F4Eh+uEI7o3yL6dcQSQMdPof51NfDN+jVipyZ9WH9VBPpHvsL+7loo/YbshafJOn9fS/OpZTd4OX9I2Dewh0SBlZL3c87y0q3QTDwikZ6Q8AX9OXTm+xMeXUgFRITqZseHUqwsVt9C6EjWNPTHAZSvUqMBr2C2WxEZ6N0LheHtviFno8rjs//Xl5MtNa23D8XfwDuSeEVDRLanDbKOb8RyMTrZqW7287/QWvkTeuFnZPlOJltyrCQQ9uUXnIM4f3GisOkXiCzC4YeCh1w1hRe7n97mThFVPxGMwoDdkRJpeROyIewl0AlrsJxRODNajswLF5yAylAC9c+WAqEo1U+tKhGlfdk+0K/9S6d5GLz00eC5As5CaEE+UkxIWzLTzKYhKaPg5VE+BR6ZIjq0Hpoh=t/Irxc" class="btn-glow bg-blue-600 p-6 rounded-2xl font-black text-xl flex items-center justify-center gap-3 active:scale-95 transition">
+                        <i class="fas fa-desktop"></i> macOS / PC
+                    </a>
+                    <a href="happ://crypt5/hfqasVygzGzy6uBmkI92wQyNNhbXfn3T/hrlqFQXXSKuAX5RhCB69dQc7pwzo+l5d0X5FF74VgN2dr8y76D0+MIQJYMdvLGh5x15KUx6l93h=D1k1yupu3SAwkgrEV4NPumlLl8lwUrRSEDjzMBqWL6Z5p52J/Rs4wdTY5vPBeLVDhZJr3IaRTeFHo53VzbyfTNif0BfjpEK0tlowAHxdxcB9eqEClUup0ODTNR5LUHk9XmtoAwbogZnt9iYFYwwqOSMYcQ6tJ9h4ODK+Qd4fnOtFBWDXCwKe5MOuYDxxRzcINwdj5ydtf08Vk2sUWXE+MUYXGvknYxdnZrG9LltmWcb0rR/9KzcT0/30BcTZZZ8tBEraHN6yaS4izLiPWoP7rcxW+avwrC8E4xSRRiPuX9QW8EBUCDtk6ZF8FkujjarUWrf0d0dxWmOoZ8gCe/U1o+Q2sEPt3BFGLnEF0EEbFGxGOYTlLd81dB/MY2rfIdy2alSclOyPutMXUQEdNZOaS6u7wiTd8XtAcCvSkFpUnukplcZ/nhnMrpJWFtrkGBeRLrTWjtYDNVYG2Azk8MKYrNa9PC44y73BL1c6EJ5hobvJi6DJ/HnKPqZpH8SiB5vYXDgpDsiCiPObOG2lUoW7V+u0dDDOo49B/1F+poBR3J3sPND9mvUxytFttsx+f5frNY5NJWi1AmuYX9tzbVXKWYVVBW4zMG1tLFO/Vh3nxxYzeuiKio9rMzF4PQS3DYKUyBvOsM+QMy06I88jAlbKgWGMBVWOYTleZCcZCHWvJ7y=tlYrxc" class="btn-glow bg-blue-600 p-6 rounded-2xl font-black text-xl flex items-center justify-center gap-3 active:scale-95 transition">
+                        <i class="fas fa-mobile-alt"></i> Mobile
+                    </a>
+                    <a href="happ://crypt5/hfqa31NW8Hs1DCScd596BqpdGqD+ytYH6rar7qxWQaZ0f1v9r5vGcm9pS+dyvBLYMcKG2FvThV+vY8VmJRriEQNAUPUfwNQ2TKHlETDUpoUH0ToIFEvCj4mLRyR2YGx6hAiFMnif6o1ZhviY/7kBHElWmkKVW+3CnXga1Itl1M7oOq/cZymm9SqqCY6hDe04cl+j33F1GwpLDAvuQr+KwLCWlSdozvfTsKouwrCBq+TMqh4rE96NU6Uy003G2xGHznrQ45FDnsHafOzoEj3tfb7IQzXbYzTEuqx9ji7J+km+/Sru9vbkhXMkQcfI65V1PusuSRTOWOUqYGlWHQObkBWmWyyu4bN+oVx8Hlc3X8jp1CfQ6YtS6ZbNi/y22+M/erlhcMKTVDivtiTpBkgjOPhVvtgvSyHlzDQ618hjig0FW+XPr9v9qSeRtsOm9giN5uYZNsmuNyHjx20Dpphv2u1tWWkSrCsSxGTd7OOrr8TdoOXgNAdxLQoiZKXAptyXaEyIj6+4GhuGaM0gM0pbBdTCuHfSjtS5OOFp/JykMPhEblba8WaO6sl+DrOzvYhpA1U+ZmqJGhB38lqB2iuGsUzKNJBGyXGzNmR4cConuOQgWGVd/W1uACw34t0N/6T4Cg75xCNz2nuhgy8K9eP+3RPPF+A3pfmWbNNF18aSuHU9fEAvf8BwWSGSK0ZkW281UgqH+GilA+zbgjx73h7RQkQCLk120icaAG1LxYPdXy41pT9I5oAa2u97e8YcnfpPX6z1OgtYi1zKNEsXS5rufRZSffyC=tx0rxc" class="btn-glow bg-green-600 p-6 rounded-2xl font-black text-xl flex items-center justify-center gap-3 active:scale-95 transition text-white">
+                        <i class="fas fa-shield-halved"></i> Whitelist
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-white/5 text-center">
+        <div class="text-3xl font-black italic mb-4 hero-title">LEGACY.</div>
+        <p class="text-gray-600 text-xs uppercase tracking-[0.4em] mb-4">Developed by S. Kurilkin • 2026</p>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({
-            duration: 1000,
-            once: true,
-            offset: 100
-        });
+        AOS.init({ duration: 1000, once: true });
     </script>
 </body>
 </html>
